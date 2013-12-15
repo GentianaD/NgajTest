@@ -14,7 +14,7 @@ public class StatsTest extends ActivityInstrumentationTestCase2<Stats> {
 		// TODO Auto-generated constructor stub
 	}
 	Activity objActivity;
-    
+	
     protected void setUp() throws Exception {
             super.setUp();
             objActivity=getActivity();
@@ -46,19 +46,12 @@ public class StatsTest extends ActivityInstrumentationTestCase2<Stats> {
     public void testAddingGraphs()
     {
     	
-    	objActivity.runOnUiThread(new Runnable() 
-        {  
-    		
-                public void run() 
-                { 
-                	final LinearLayout l1=(LinearLayout)objActivity.findViewById(hig.herd.ngaj.R.id.Layout3);
-                	((Stats)objActivity).DrawGraphs(l1, new double [] {1,2,3,4,5,6,7},"Testing");
-                	
-                       
-                }      
-        });
+      	LinearLayout l1=(LinearLayout)objActivity.findViewById(hig.herd.ngaj.R.id.graph1);
+      	LinearLayout l2=(LinearLayout)objActivity.findViewById(hig.herd.ngaj.R.id.graph2);
+      	assertNotNull(l1);
+    	assertNotNull(l2);
+      	
     	
-    	assertEquals(1,1);
     }
 
 }

@@ -1,24 +1,23 @@
 package hig.herd.ngaj.test;
 
 import hig.herd.ngaj.MainActivity;
-import hig.herd.ngaj.Results;
 import hig.herd.ngaj.Stats;
 import hig.herd.ngaj.Tracks;
-import android.R.bool;
 import android.app.Activity;
 import android.app.Instrumentation.ActivityMonitor;
 import android.hardware.Camera;
-import android.provider.MediaStore;
 import android.test.ActivityInstrumentationTestCase2;
 import android.widget.Button;
 
 public class MainActivityTest extends
-		ActivityInstrumentationTestCase2<MainActivity> {
+ActivityInstrumentationTestCase2 <MainActivity> {
 	Activity objActivity;
 
 	public MainActivityTest() {
 		super("hig.herd.ngaj", MainActivity.class);
 	}
+	
+
 
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -83,6 +82,7 @@ public class MainActivityTest extends
 
 		if (Camera.open() == null)
 			test = true;
+		
 		else
 			test = false;
 

@@ -5,17 +5,18 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
-import android.test.ActivityInstrumentationTestCase2;
+import android.test.SingleLaunchActivityTestCase;
 import android.view.View;
 import android.widget.TextView;
 
-public class LevelUpTest extends ActivityInstrumentationTestCase2<LevelUp> {
+public class LevelUpTest extends SingleLaunchActivityTestCase <LevelUp> {
 
 	public LevelUpTest() {
 		super("hig.herd.ngaj",LevelUp.class);
 		// TODO Auto-generated constructor stub
 	}
 	Activity objActivity;
+	
 	protected void setUp() throws Exception
 	{
 		super.setUp();
@@ -33,7 +34,7 @@ public class LevelUpTest extends ActivityInstrumentationTestCase2<LevelUp> {
 						LevelUp.Level=5;
 						((LevelUp)objActivity).calculateText();
 						String text=(String) tv.getText();
-						assertEquals("Well Done! \nYou have reached maximum level!\nYour current level is : 5 (Elite)",text);
+						assertEquals("Well Done! \nYou have reached one level up!\nYour current level is : 5 (Elite)",text);
 					}
 				});
 		
@@ -53,5 +54,7 @@ public class LevelUpTest extends ActivityInstrumentationTestCase2<LevelUp> {
 			}
 		});
 	}
+	
+	
 
 }

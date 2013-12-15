@@ -1,12 +1,13 @@
 package hig.herd.ngaj.test;
 
+
 import hig.herd.ngaj.Tracks;
 import android.app.Activity;
 import android.database.Cursor;
 import android.test.ActivityInstrumentationTestCase2;
 import android.widget.ListView;
 
-public class TracksTest extends ActivityInstrumentationTestCase2<Tracks> {
+public class TracksTest extends ActivityInstrumentationTestCase2 <Tracks> {
 
 	Activity objActivity;
 
@@ -15,7 +16,7 @@ public class TracksTest extends ActivityInstrumentationTestCase2<Tracks> {
 		// TODO Auto-generated constructor stub
 
 	}
-
+	
 	protected void setUp() throws Exception {
 		super.setUp();
 		objActivity = getActivity();
@@ -40,5 +41,6 @@ public class TracksTest extends ActivityInstrumentationTestCase2<Tracks> {
 	     assertEquals(countItems,countDB);
 		
 	}
+
 
 }
