@@ -11,9 +11,8 @@ public class AllTests {
 		
 		suite.addTestSuite(LevelUpTest.class);
 		suite.addTestSuite(ResultsTest.class);
-		//suite.addTestSuite(StatsTest.class);
+		suite.addTestSuite(StatsTest.class);
 		suite.addTestSuite(TracksTest.class);
-		//suite.addTestSuite(GPSserviceTest.class);
 		suite.addTestSuite(MainActivityTest.class);
 		//$JUnit-END$
 		return suite;
